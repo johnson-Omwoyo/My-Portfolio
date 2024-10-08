@@ -1,0 +1,65 @@
+.main-cont {
+  background-image: url("./assets/weathered-concrete-surface-wallpaper-background.jpg"); /* Replace with your image path */
+  background-size: cover; /* Cover the entire screen */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Keep it fixed when scrolling */
+  background-repeat: no-repeat; /* Prevent repeating */
+  /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+.carded {
+  background: rgb(27, 49, 67);
+  box-shadow: 14px 14px 12px rgba(0, 0, 0, 0.5);
+}
+.about-me {
+  color: rgb(215, 224, 221);
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.head h1 {
+  color: rgb(27, 49, 67);
+  font-family: sans-serif;
+  font-weight: 900;
+}
+.head h2 {
+  font-family: sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
+}
+.titles {
+  font-size: 18px;
+  color: rgb(27, 49, 67);
+}
+.head .connect {
+  background: rgb(27, 49, 67);
+  color: rgb(215, 224, 221);
+  font-family: sans-serif;
+}
+#get {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+}
+.technologies {
+  color: aliceblue;
+}
+.row .lets-connect {
+  background: rgb(215, 224, 221);
+}
+.fa-envelope,
+.fa-linkedin,
+.email,
+.my-email {
+  color: aliceblue;
+}
+.links {
+  list-style-type: none;
+}
+.links li {
+  color: rgb(215, 224, 221);
+
+}

@@ -193,7 +193,5 @@ function App() {
 
 export default App;
 
-
-
 //                  Rigathi is really emoshonol
 //                  Doing what we expectd tommorrow

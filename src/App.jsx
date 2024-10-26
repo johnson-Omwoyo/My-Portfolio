@@ -66,8 +66,8 @@ function App() {
               </div>
             </div>
             <div className="row mt-3">
-              <div className="col-1"></div>
-              <div className="col">
+              {/* <div className="col-12 col-md-1 "></div> */}
+              <div className="col-12">
                 <div className="container">
                   <div className="row  d-flex align-items-center justify-content-center rounded  carded">
                     <div className=" col-12 col-md-5 py-3  ">
@@ -103,7 +103,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="col-1"></div>
+              {/* <div className="col-12  col-md-1"></div> */}
             </div>
             <div className="row">
               <div className="col-12 text-center my-5 ">

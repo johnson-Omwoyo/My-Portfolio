@@ -1,13 +1,38 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-// import my_image from "./assets/c6c69bfa-de39-489c-8553-3c018d428a25-removebg-preview.png";
+import my_image from "../src/assets/c6c69bfa-de39-489c-8553-3c018d428a25-removebg-preview-removebg-preview.png";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import { Carousel } from "react-bootstrap";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  const Projects = [
+    {
+      description: "This is the best service I've ever used!",
+      name: "Roots and realms",
+      link: "https://roots-and-reals-frontend.vercel.app/",
+      image:
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2026&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      description: "Amazing experience, highly recommend!",
+      name: "Syneffa clone",
+      link: "https://syneffa-clone.vercel.app/",
+      image:
+        "https://cdn.prod.website-files.com/62720565a7b402ef161555a0/659719f5f96ac2728edfa6f2_Synnefa%20Smart%20Farmer-p-800.jpeg",
+    },
+    {
+      description: "I can't imagine my life without it!",
+      name: "Mingle Sphere",
+      link: "https://mingle-sphere-frontend.vercel.app/",
+      image:
+        "https://bcec.com.au/wp-content/uploads/School-formals-V2-840x458-1.jpg",
+    },
+  ];
 
   return (
     <div className="container-fluid main-cont ">
@@ -45,10 +70,10 @@ function App() {
               <div className="col">
                 <div className="container">
                   <div className="row  d-flex align-items-center justify-content-center rounded  carded">
-                    <div className=" col-12 col-md-5 py-3 ">
+                    <div className=" col-12 col-md-5 py-3  ">
                       <img
                         className="img-fluid rounded-pill"
-                        src="src/assets/c6c69bfa-de39-489c-8553-3c018d428a25-removebg-preview-removebg-preview.png"
+                        src={my_image}
                         alt=""
                       />
                     </div>
@@ -81,13 +106,49 @@ function App() {
               <div className="col-1"></div>
             </div>
             <div className="row">
-              <div className="col text-center my-5 ">
+              <div className="col-12 text-center my-5 ">
                 <div>
                   <h1 id="get">My Recent Work</h1>
                   <h4 id="projects" className="titles">
                     Featured Projects
                   </h4>
                 </div>
+              </div>
+              <div className="col-12 ">
+                <Carousel className="main-cont carded rounded">
+                  {Projects.map((project, index) => (
+                    <Carousel.Item key={index}>
+                      <div className="d-flex justify-content-center ">
+                        <div className="col-12 col-md-8 my-4">
+                          <div className="card text-center rounded carded shadow-lg">
+                            <img
+                              className="card-img-top img-fluid rounded-top"
+                              src={project.image}
+                              alt={project.name}
+                              style={{ height: "300px", objectFit: "cover" }} // Ensures images are consistently sized
+                            />
+                            <div className="card-body">
+                              <h2 className="card-title head h2">
+                                {project.name}
+                              </h2>
+                              <p className="about-me">{project.description}</p>
+                              <div className="text-center">
+                                <button
+                                  onClick={() =>
+                                    window.open(project.link, "_blank")
+                                  }
+                                  className="btn lets-connect py-2 px-4"
+                                >
+                                  View Project
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
               </div>
             </div>
             <div className="row ">
@@ -192,6 +253,3 @@ function App() {
 }
 
 export default App;
-
-//                  Rigathi is really emoshonol
-//                  Doing what we expectd tommorrow

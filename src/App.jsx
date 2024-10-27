@@ -1,10 +1,8 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import my_image from "../src/assets/c6c69bfa-de39-489c-8553-3c018d428a25-removebg-preview-removebg-preview.png";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "./App.css";
 import { Carousel } from "react-bootstrap";
 
 function App() {
@@ -35,15 +33,15 @@ function App() {
   ];
 
   return (
-    <div className="container-fluid main-cont ">
+    <div className="container-fluid main-cont fade show ">
       {" "}
       <div className="row">
         <div className="col">
           <div className="container">
             <div className="row">
               <div className="col text-center head">
-                <div className="my-5">
-                  <div>
+                <div className="my-5 fade show">
+                  <div id="home">
                     <h2>Hey there! I'm</h2>
                     <h1>Johnson Omwoyo</h1>
                     <h2>Software Developer</h2>
@@ -59,15 +57,15 @@ function App() {
                 </div>
                 <div>
                   <h1 id="get">Get To Know</h1>
-                  <h4 className="titles" id="home">
+                  <h4 className="titles" id="about">
                     About Me
                   </h4>
                 </div>
               </div>
             </div>
             <div className="row mt-3">
-              {/* <div className="col-12 col-md-1 "></div> */}
-              <div className="col-12">
+              <div className="col-12 col-md-1 "></div>
+              <div className="col-12 col-md-10 ">
                 <div className="container">
                   <div className="row  d-flex align-items-center justify-content-center rounded  carded">
                     <div className=" col-12 col-md-5 py-3  ">
@@ -103,9 +101,21 @@ function App() {
                   </div>
                 </div>
               </div>
-              {/* <div className="col-12  col-md-1"></div> */}
+              <div className="col-12 d-none d-md-flex  col-md-1 flex-column justify-content-center">
+                <span>S</span>
+                <span>c</span>
+                <span>r</span>
+                <span>o</span>
+                <span>l</span>
+                <span>l</span>
+                <span> </span>
+                <span>D</span>
+                <span>o</span>
+                <span>w</span>
+                <span>n</span>
+              </div>
             </div>
-            <div className="row">
+            <div className="row" id="portflio">
               <div className="col-12 text-center my-5 ">
                 <div>
                   <h1 id="get">My Recent Work</h1>
@@ -114,7 +124,7 @@ function App() {
                   </h4>
                 </div>
               </div>
-              <div className="col-12 ">
+              <div className="col-12  ">
                 <Carousel className="main-cont carded rounded">
                   {Projects.map((project, index) => (
                     <Carousel.Item key={index}>
@@ -125,7 +135,7 @@ function App() {
                               className="card-img-top img-fluid rounded-top"
                               src={project.image}
                               alt={project.name}
-                              style={{ height: "300px", objectFit: "cover" }} // Ensures images are consistently sized
+                              style={{ height: "340px", objectFit: "cover" }}
                             />
                             <div className="card-body">
                               <h2 className="card-title head h2">
@@ -151,7 +161,7 @@ function App() {
                 </Carousel>
               </div>
             </div>
-            <div className="row ">
+            <div className="row " id="skills">
               <div className="col text-center my-5">
                 <div>
                   <h1 id="get">Technical Skills</h1>
@@ -193,7 +203,7 @@ function App() {
               <div className="col text-center my-5">
                 <div>
                   <h1 id="get">Let's' connect</h1>
-                  <h4 className="titles" id="">
+                  <h4 className="titles" id="contact_me">
                     contact me
                   </h4>
                 </div>
@@ -223,23 +233,23 @@ function App() {
             </div>
             <div className="row">
               <div className="col-12 col-md-4"></div>
-              <div className="col-12  text-center ">
+              <div className="col-12 col-md-4  text-center ">
                 <h2>Johnson Omwoyo</h2>
                 <ul className="links d-flex justify-content-between">
                   <li>
                     <a href="#home">Home</a>
                   </li>
                   <li>
-                    <a href="#home">about</a>
+                    <a href="#about">about</a>
                   </li>
                   <li>
-                    <a href="#home">Portfolio</a>
+                    <a href="#portfolio">Portfolio</a>
                   </li>
                   <li>
-                    <a href="#home">Skills</a>
+                    <a href="#skills">Skills</a>
                   </li>
                   <li>
-                    <a href="#home">Contact</a>
+                    <a href="#contact">Contact</a>
                   </li>
                 </ul>
               </div>

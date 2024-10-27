@@ -65,3 +65,14 @@
 /* .my-img {
   background-image: url("./assets/c6c69bfa-de39-489c-8553-3c018d428a25-removebg-preview-removebg-preview.png");
 } */
+.btn:hover {
+  border: 1px;
+  border-style: solid;
+  color: blue;
+  border-color: red;
+}
+.flex-column span{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  font-size: larger;
+}

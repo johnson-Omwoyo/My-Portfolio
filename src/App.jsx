@@ -89,7 +89,7 @@ function App() {
                       </p>
                       <p className="about-me">
                         Apart from programming, I enjoy music(making and
-                        litsening)!
+                        listening)!
                       </p>
                       <div className="text-center">
                         <button className="btn lets-connect my-2 my-md-4 py-3 px-4 ">
@@ -138,7 +138,7 @@ function App() {
                               style={{ height: "340px", objectFit: "cover" }}
                             />
                             <div className="card-body">
-                              <h2 className="card-title head h2">
+                              <h2 style={{color:"white"}} className="card-title head h2">
                                 {project.name}
                               </h2>
                               <p className="about-me">{project.description}</p>

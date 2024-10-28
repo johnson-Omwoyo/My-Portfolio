@@ -7,6 +7,19 @@ import { Carousel } from "react-bootstrap";
 
 function App() {
   const [count, setCount] = useState(0);
+  const resumeLink =
+    "https://docs.google.com/document/d/1BdNnL7t_DAL8WbJ3d6j7fMtygkc8sim8yN1q7iHEmQA/edit?usp=sharing";
+  const linkedIn =
+    "https://www.linkedin.com/in/johnson-omwoyo-809a20312?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRWZt5mnhSHyweN8YihKq%2FQ%3D%3D";
+
+  function sendEmail() {
+    const email = "johnsonomwoyo100@gmail.com";
+    const subject = "Inquiry About Your Portfolio";
+    const body = `Hi,\n\nI came across your portfolio and I'm interested in your work. Could you please provide more details about your services and availability?\n\nThank you!\n\nBest regards,`;
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  }
 
   const Projects = [
     {
@@ -47,12 +60,20 @@ function App() {
                     <h2>Software Developer</h2>
                   </div>
                   <div>
-                    <button className=" btn  my-2 my-md-4 py-3 px-4 connect mx-2 ">
+                    <button
+                      onClick={() => {
+                        window.open(resumeLink, "_blank");
+                      }}
+                      className=" btn  my-2 my-md-4 py-3 px-4 connect mx-2 "
+                    >
                       view Resume
                     </button>
-                    <button className=" btn my-2 my-md-4 py-3 px-4 connect mx-2">
+                    <a
+                      href="#contact_me"
+                      className=" btn my-2 my-md-4 py-3 px-4 connect mx-2"
+                    >
                       Let's Connect
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div>
@@ -92,10 +113,13 @@ function App() {
                         listening)!
                       </p>
                       <div className="text-center">
-                        <button className="btn lets-connect my-2 my-md-4 py-3 px-4 ">
+                        <a
+                          href="#contact_me"
+                          className="btn lets-connect my-2 my-md-4 py-3 px-4 "
+                        >
                           {" "}
                           Let's Connect
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -138,7 +162,10 @@ function App() {
                               style={{ height: "340px", objectFit: "cover" }}
                             />
                             <div className="card-body">
-                              <h2 style={{color:"white"}} className="card-title head h2">
+                              <h2
+                                style={{ color: "white" }}
+                                className="card-title head h2"
+                              >
                                 {project.name}
                               </h2>
                               <p className="about-me">{project.description}</p>
@@ -213,16 +240,21 @@ function App() {
                       <i className=" icon fa-regular fa-envelope"></i>
                       <h5 className="email">Email</h5>
                       <p className="my-email">johnsonomwoyo100@gmail.com</p>
-                      <button className="btn lets-connect my-2 my-md-4 py-3 px-4 ">
-                        {" "}
+                      <button
+                        onClick={sendEmail}
+                        className="btn lets-connect my-2 my-md-4 py-3 px-4"
+                      >
                         Send a message
-                      </button>{" "}
+                      </button>
                     </div>
                     <div className="col-12 col-md-5  mx-2 text-center carded py-3 my-3 rounded">
                       <i className="fa-brands fa-linkedin"></i>
                       <h5 className="email">Linkedin</h5>
                       <p className="my-email">Johnson Omwoyo</p>
-                      <button className="btn lets-connect my-2 my-md-4 py-3 px-4 ">
+                      <button
+                        onClick={() => window.open(linkedIn, "_blank")}
+                        className="btn lets-connect my-2 my-md-4 py-3 px-4 "
+                      >
                         {" "}
                         View Profile
                       </button>{" "}
